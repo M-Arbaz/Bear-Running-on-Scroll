@@ -65,7 +65,7 @@ document.body.addEventListener('click',()=>{
       canvas.classList.remove('jump');},500)
     })
 
-(() => {
+const runBear = () => {
     const timings = [10, 700, 900, 1100, 1300, 1500, 1700, 1900, 2100, 2300, 2500];
     timings.forEach((time, i) => {
     setTimeout(() => {
@@ -84,6 +84,7 @@ document.body.addEventListener('click',()=>{
         }
     }, time);
     });
-  })();
+  }; 
+  runBear();
 
 })  
