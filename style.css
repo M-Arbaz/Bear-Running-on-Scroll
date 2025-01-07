@@ -1,0 +1,105 @@
+
+:root {
+    --trans: calc(50vw - 100px);
+    --body-height:1000vh;
+}
+
+body{
+height: var(--body-height);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.frame {
+    display: none;
+}
+
+.st0 {
+    fill: #A45F11;
+}
+
+.st1 {
+    fill: #084CB1;
+}
+
+.st2 {
+    fill: #302626;
+}
+
+.st3 {
+    fill: #C6C6C6;
+}
+
+.st4 {
+    fill: #FCCD9D;
+}
+
+.st5 {
+    fill: #FFFFFF;
+}
+
+.st6 {
+    fill: #939393;
+}
+
+.st7 {
+    fill: #FFBE3C;
+}
+
+.st8 {
+    fill: #AFAEAE;
+}
+
+.st9 {
+    fill: #363837;
+}
+
+.st10 {
+    fill: none;
+    stroke: #302626;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+svg {
+    width: 200px;
+}
+
+#canvas {
+    display: inline-block;
+    position: fixed;
+
+    transition: 0.2s;
+    bottom: 0;
+}
+
+.end-screen {
+    bottom: 0;
+}
+
+.back-svg svg {
+    transform: scale(-1, 1);
+}
+
+.middle-screen {
+    transform: translate(var(--trans), -50vh) scale(2, 2);
+}
+.jump svg > g{
+    animation:jump 0.5s linear 1;
+  }
+  @keyframes jump {
+from {transform: translateY(-100px);}
+to {transform: translateY(0px);}
+}
+.loader {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+}
